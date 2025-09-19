@@ -20,6 +20,11 @@ jobs:
         run: |
           cd Practice\ Project/
           npm run build
+
+      - name: Run Test Case
+        run: |
+          cd Practice\ Project/
+          npm run test
       - name: Finish
         run: echo "Done.." 
           
