@@ -1,0 +1,30 @@
+name: Issue Workflow
+
+on:
+    issues:
+        types: [opened,edited]
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+         - name: Getting the github context
+           run : |
+                echo "Repository: ${{ github.repository }}"
+                echo "Branch: ${{ github.ref_name }}"
+                echo "Event: ${{ github.event_name }}"
+                echo "Actor: ${{ github.actor }}"
+                echo "SHA: ${{ github.sha }}"
+                echo "Workflow: ${{ github.workflow }}"
+                echo "Job: ${{ github.job }}"
+                echo "Run ID: ${{ github.run_id }}"
+         - name: Job info
+           run: |
+                echo "Job status: ${{ job.status }}"
+
+
+       
+
+
+    
+
+    

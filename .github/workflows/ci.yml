@@ -25,6 +25,10 @@ jobs:
         run: |
           cd Practice\ Project/
           npm run test
+      - name: npm run lint
+        run: |
+          cd Practice\ Project/
+          npm run test
       - name: Finish
         run: echo "Done.." 
           
