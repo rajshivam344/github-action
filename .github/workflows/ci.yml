@@ -1,0 +1,11 @@
+name: Node Build 
+
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print getting
+        run: echo "Hello World"
+      - name: print goodbuy
+        run: echo "Done"
