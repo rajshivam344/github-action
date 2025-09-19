@@ -17,7 +17,7 @@ jobs:
           cd Practice\ Project/
           npm install
       - name: Build Project
-        run:
+        run: |
           cd Practice\ Project/
           npm run build
       - name: Finish
