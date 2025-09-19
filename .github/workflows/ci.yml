@@ -5,7 +5,26 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print getting
-        run: echo "Hello World"
-      - name: print goodbuy
-        run: echo "Done"
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        #Install node js
+      - name: Install node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install dependencies
+        run: |
+          cd Practice\ Project/
+          npm install
+      - name: Build Project
+        run:
+          cd Practice\ Project/
+          npm run build
+      - name: Finish
+        run: echo "Done.." 
+          
+
+
+
+    
+
